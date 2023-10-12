@@ -7,8 +7,16 @@ class OwnedCouses extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('My Courses'),
+        Text('My Courses',
+            style: TextStyle(
+              fontSize: 17,
+              fontFamily: 'Poppins-Medium',
+              fontWeight: FontWeight.w600,
+              color: Colors.black,
+            )),
+          SizedBox(height: 5,),
         MyCourse(),
         SizedBox(
           height: 5,

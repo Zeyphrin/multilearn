@@ -10,8 +10,15 @@ class ListCourses extends StatelessWidget {
     return Container(
             width: double.infinity,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('All Courses'),
+                Text('All Courses', style: TextStyle(
+              fontSize: 17,
+              fontFamily: 'Poppins-Medium',
+              fontWeight: FontWeight.w600,
+              color: Colors.black,
+            )),
+            SizedBox(height: 5,),
                 GridView.builder(
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),

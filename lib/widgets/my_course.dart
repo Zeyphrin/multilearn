@@ -36,21 +36,38 @@ class MyCourse extends StatelessWidget {
                           height: MediaQuery.of(context).size.width * 0.15,
                           child: Image.asset(imageUrl)),
                       SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.03,
+                        width: MediaQuery.of(context).size.width * 0.01,
                       ),
                       Expanded(
                           child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(courseName),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10, bottom: 5),
+                            child: Text(courseName, style: TextStyle(
+                                        fontSize: 12,
+                                        fontFamily: 'Poppins-SemiBold',
+                                        fontWeight: FontWeight.w600,
+                                        color: Colors.white,
+                                      )),
+                          ),
                           LinearPercentIndicator(
                             lineHeight: 5,
                             percent: progressPercent,
                             progressColor: progressColor,
                             backgroundColor: progressBackgroundColor,
                             animation: true,
+                            barRadius: Radius.circular(10),
                           ),
-                          Text(courseDeadline)
+                          Padding(
+                            padding: const EdgeInsets.only(left :10, top: 5),
+                            child: Text(courseDeadline, style: TextStyle(
+                                          fontSize: 12,
+                                          fontFamily: 'Poppins-SemiBold',
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.white,
+                                        )),
+                          )
                         ],
                       ))
                     ],

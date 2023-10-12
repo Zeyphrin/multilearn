@@ -16,16 +16,32 @@ class Header extends StatelessWidget {
               child: Image.asset('images/waguri.jpg'),
             ),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text("Hello,"),
-              Text("Zeyphrine"),
-            ],
+          SizedBox(width: 10),
+          Expanded(
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Hello,",style: TextStyle(
+                    fontFamily: 'Poppins-SemiBold' ,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xff515151),
+                    fontSize: 15
+                  ),),
+                  Text("Zeyphrine!", style: TextStyle(
+                    fontFamily:'Poppins-SemiBold',
+                    fontWeight: FontWeight.w600,
+                    fontSize: 18
+                  ),),
+                ],
+              ),
+          
+            ),
           ),
-          Expanded(child: Container()),
           Icon(Icons.search),
           Icon(Icons.menu),
+  
         ],
       ),
     );

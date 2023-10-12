@@ -13,8 +13,11 @@ class HomePage extends StatelessWidget {
       child: ListView(
         children: [
           Header(),
+          SizedBox(height: 10,),
           PromoCourse(),
+          SizedBox(height: 10,),
           OwnedCouses(),
+          SizedBox(height: 10,),
           ListCourses(),
         ],
       ),
